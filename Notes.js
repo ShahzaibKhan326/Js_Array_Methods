@@ -52,3 +52,18 @@
 // A value passed to the fucntion as its "this" value.
 // Return =>
 // Boolean => True if all element pass the test, other wise false.
+
+/*
+fill()=>
+The Fill() Method fills specified elements in an array with a value.
+The fill() method overwrites the original array.
+Start and end position can be specified. if not , all element will be filled.
+Syntex=>
+array.fill(value,start,end)
+Parameters=>
+value ==> the value to fill in.
+start ==> The Start index(Position)
+end   ==> The Stop index( Default is Array Length)
+Return:
+The Filled Array
+*/

@@ -7,3 +7,5 @@
 // copyWithin()
 // entries()
 // every()
+// fill()
+// filter()

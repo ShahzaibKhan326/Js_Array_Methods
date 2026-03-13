@@ -67,3 +67,20 @@ end   ==> The Stop index( Default is Array Length)
 Return:
 The Filled Array
 */
+
+/*
+Filter()=>
+The filter method creates a nea arrray filled with elemetns tha t pass a test provided by a funcition.
+The Filter method does not execute the function for empty elements.
+The filter method does not change the original array.
+SYNTEX=>
+array.filter(fucntion(currentValue,index,arr),thisValue)
+PARAMETER=>
+// fucntion=> Requird => A fucntion to be run for each element in the array.
+// currentValue = Requird => The value of the current element.
+// index => Optional => The index of the current element
+// arr => Optional => The array of the current element.
+// thisValue => Optional . Dafault > "undefined" => 
+// A value passed to the fucntion as its "this" value.
+
+*/

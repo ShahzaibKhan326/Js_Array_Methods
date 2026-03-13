@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Filter()</title>
+  </head>
+  <body>
+    <h1>Array Filter()</h1>
+    <div id="container"></div>
+    <div class="buttons">
+      <button onclick="render('above')">Above 30</button>
+      <button onclick="render('below')">Below 18</button>
+      <button onclick="render('perfect')">PerfectMatch</button>
+      <button onclick="render('all')">show all</button>
+      <input type="text" placeholder="Enter something" id="input" />
+    </div>
+
+    <script>
+      // --------------->
+      //   const ages = [32, 33, 16, 40];
+      //   const result = ages.filter(checkAdult);
+
+      //   function checkAdult(age) {
+      //     return age >= 18;
+      //   }
+      //   console.log(result);
+
+      // --------------->
+
+      //   let data = [
+      //     { name: "shahzaib", age: 12 },
+      //     { name: "shahzaib", age: 25 },
+      //     { name: "jamal", age: 32 },
+      //     { name: "shakor", age: 52 },
+      //     { name: "almas", age: 52 },
+      //     { name: "shumaila", age: 32 },
+      //     { name: "asgar", age: 23 },
+      //   ];
+
+      //   let container = document.getElementById("container");
+      // //   let selectedFilter = null;
+
+      //   function render(filter) {
+
+      //     container.innerHTML = " ";
+
+      //     let filtered = filter === "all" ? data  : data.filter(item => item.name.toLowerCase().includes(filter)) ;
+
+      //     if(filtered.length === 0)
+      //   {
+      //     container.innerHTML = "<p>Data Not found</p>"
+      //     return;
+      //   }
+
+      //     filtered.forEach(
+      //       (item) =>
+      //         (container.innerHTML += `
+      //    <p>Name : ${item.name}</p>
+      //    <p>Age : ${item.age}</p>
+      //    `),
+      //     );
+      //   }
+
+      //   let input = document.getElementById("input");
+      //   input.addEventListener("keypress", function(event)
+      //   {
+      //     if(event.key === "Enter")
+      //   {
+      //        render(input.value);
+
+      //   }
+      //   else
+      //   {
+      //     render("all")
+      //   }
+      //   }
+      //   )
+
+      // ------imporved---------------------->
+
+      let data = [
+        { name: "shahzaib", age: 12 },
+        { name: "shahzaib", age: 25 },
+        { name: "jamal", age: 32 },
+        { name: "shakor", age: 52 },
+        { name: "almas", age: 52 },
+        { name: "shumaila", age: 32 },
+        { name: "asgar", age: 23 },
+      ];
+    
+      let container = document.getElementById("container");
+      let input = document.getElementById("input");
+
+      function render(filter = "all")
+    {
+        container.innerHTML ="";
+        let filtered = filter === "all" ? data : data.filter(item => item.name.includes(filter.toLowerCase()));
+
+        if(filtered.length === 0)
+    {
+        const msg = document.createElement("p");
+        msg.textContent = "Data Not found";
+        container.appendChild(msg)
+        return;
+    }
+
+    filtered.forEach(item => {
+        const wrapper = document.createElement("div")
+
+        const name = document.createElement("p");
+        name.textContent =`Name: ${item.name}`
+
+        const age = document.createElement("p");
+        age.textContent =`Age: ${item.age}`
+
+        wrapper.appendChild(name)
+        wrapper.appendChild(age)
+
+        container.appendChild(wrapper)
+    })
+    }
+
+    input.addEventListener("keydown", function(event) 
+{
+    if(event.key ==="Enter")
+{
+    render(input.value.trim())
+}
+});
+
+render();
+    </script>
+  </body>
+</html>

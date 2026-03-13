@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Find()</title>
+  </head>
+  <body>
+    <h1>Array Find()</h1>
+
+    <script>
+      //  const ages = [4, 12, 16, 20];
+      //  let FirstOver18 = ages.find(n => n >= 18)
+      //  console.log(FirstOver18)
+
+      // ----------------------->
+
+      let users = [
+        { name: "khan", userID: 313 },
+        { name: "jan", userID: 891 },
+        { name: "ali", userID: 389 },
+      ];
+
+      function showUser(userId) {
+      
+          let user = users.find((u) => u.userID === userId);
+          if(!user)
+          {
+            console.log("Data Not found")
+            return;
+          }
+          console.log(`Name: ${user.name}, ID: ${user.userID}`);
+      }
+
+      userNumber = 389;
+
+      showUser(userNumber);
+
+      //  ---------ForEachPractice---------->
+      //  const ages = [4, 12, 16, 20];
+      //  let max = ages[0]
+      //  ages.forEach(num => {
+      //   if(num > max)
+      //  {
+      //   max = num;
+      //  }
+      //  })
+      // console.log(max)
+    </script>
+  </body>
+</html>

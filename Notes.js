@@ -84,3 +84,15 @@ PARAMETER=>
 // A value passed to the fucntion as its "this" value.
 
 */
+
+/*
+DESCRIPTION:>
+The find() method return the value of the first element that passes a test.
+The find() method executes a function for each array element.
+The Find() method return Undefined if no element are found.
+The find() method does not execute the function for empty elements.
+The find() method does not change the origianl array.
+SYNTEX:> 
+array.finc(function(currentValue,index,arr),thisValue)
+
+*/

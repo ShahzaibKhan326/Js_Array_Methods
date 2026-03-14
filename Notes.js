@@ -96,3 +96,15 @@ SYNTEX:>
 array.finc(function(currentValue,index,arr),thisValue)
 
 */
+
+/*
+//DESCRIPTION:>
+The flat() method concatenate sub-array elements.
+SYNTEX:>
+array.flat(depth);
+PARAMETERS:>
+Detph ==> (Optional) ==> How deep a neested array should be flattened Default is 1.
+RETURN:>
+The flattern array.
+
+*/
